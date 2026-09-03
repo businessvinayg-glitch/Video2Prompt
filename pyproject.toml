@@ -26,13 +26,13 @@ dev = [
 ]
 
 [project.scripts]
-video2prompt = "feedback_analyzer.cli:app"
+video2prompt = "video2prompt.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
-feedback_analyzer = ["py.typed"]
+video2prompt = ["py.typed"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
