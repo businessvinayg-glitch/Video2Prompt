@@ -305,6 +305,7 @@ def test_cli_missing_api_key(tmp_path: Path, monkeypatch):
     video = tmp_path / "input" / "clip.mp4"
     video.write_bytes(b"not-a-real-video")
     monkeypatch.delenv("CURSOR_API_KEY", raising=False)
+    monkeypatch.setenv("LLM_PROVIDER", "cursor")
 
     with patch("video2prompt.cli.probe_video") as probe_mock, patch(
         "video2prompt.cli.extract_audio"
